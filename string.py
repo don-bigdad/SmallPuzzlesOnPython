@@ -49,7 +49,7 @@ s1.split()
 s2.split()
 print(s1[-1]==s2[-1])
 #2 задание
-s1.replace("","\t")
+s1.replace(" ","\t")
 #3 задание
 a = s1.split()[0]
 b = s2.split()[0]
