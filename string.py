@@ -12,9 +12,11 @@ print(r1==r2 ,"\n","---------------")
 #Замінити у першому рядку всі пробіли на знак табуляції; 
 print(string_1)
 print(string_1.replace(" ","\t"))
-#Вивести перші слова у рядках з їх заміною;
+#Замінити перші слова у рядках;
+string_1=input("Введите строку 1:")
+string_2=input("Введите строку 2:")
 a=string_1.split()[0]
 b=string_2.split()[0]
-n=b
-h=a
-print(n,h)
+h=string_1.replace(string_1.split()[0],b)
+n=string_2.replace(string_2.split()[0],a)
+print(h,n)
