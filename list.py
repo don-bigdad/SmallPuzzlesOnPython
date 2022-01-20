@@ -53,3 +53,12 @@ j=w.index(max(w))
 u=w.index(min(w))
 w[j],w[u]=w[u],w[j]
 print(w)
+#Дан список чисел. Превратите его в список квадратов этих чисел.
+import random
+list=random.sample(range(20),3)
+list1=list[0]**2
+list2=list[1]**2
+list3=list[2]**2
+print(list)
+print(list1,list2,list3)
+#Дан список чисел, необходимо удалить все вхождения числа 20 из него.
