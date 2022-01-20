@@ -53,3 +53,23 @@ if abs(a-c)==abs(b-d):
     print("move allowed")
 else:
     print("move forbitten")
+# номер месяца (от 1 до 12), и возвращающую время года, которому этот месяц принадлежит (зима, весна, лето или осень).
+season = int(input("Enter a season "))
+if season <= 2 and season == 12:
+    print("winter")
+elif season <= 6:
+    print("spring")
+elif season <= 9:
+    print("autumn")
+#В переменной min лежит число от 0 до 59. Определите в какую четверть часа попадает это число (в первую, вторую, третью или четвертую).
+a=int(input("enter a digit "))
+if a<=15: #четверть я считаю из декартовой системы координат
+    print("1 четверть")
+elif a<=30:
+    print("4я четверть")
+elif a<=45:
+    print("3я четверть")
+elif a<=60:
+    print("4я четверть")
+else:
+    print("digit is more than 60")
