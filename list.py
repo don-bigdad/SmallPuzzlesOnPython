@@ -62,3 +62,11 @@ list3=list[2]**2
 print(list)
 print(list1,list2,list3)
 #Дан список чисел, необходимо удалить все вхождения числа 20 из него.
+import random
+list=random.sample(range(10,30),10)
+if 20 in list: 
+    x=list.index(20)
+    del list[x]
+else:
+    print("20 is not in list")
+print(list)
