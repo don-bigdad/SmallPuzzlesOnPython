@@ -22,15 +22,14 @@ else:
 #счастливый билет.проверить является ли шестизначный билет счастливым.Если получится не привязыватся к
 # номеру билета выполнить код
 f=list(map(int,str(input("enter your ticket(six-digit)"))))
-if f[0:4] == f[4:]:
+if sum(f[0:4]) == sum(f[4:]):
         print("You ticket is lucky")
 else:
     print("you have a regular ticket")
 #Если билет имеет больше 6-ти цифр
 f=list(map(int,str(input("enter your ticket"))))
 h=len(f)//2
-print(f[0:h]==f[h:])
-if f[0:h]==f[h:]:
+if sum(f[0:h])==sum(f[h:]):
     print("your ticket is lucky")
 else:
     print("You have a regular ticket")
