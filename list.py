@@ -33,8 +33,7 @@ print(p)
 import random
 x=int(input("Введите число:"))
 m=random.sample(range(10),5)
-x0=x
-print((x0==m[0] or x0==m[1] or x0==m[2] or x0==m[3] or x0==m[4])*"Числа совпали" or "Совпадений не найдено")
+print((x==m[0] or x==m[1] or x==m[2] or x==m[3] or x==m[4])*"Числа совпали" or "Совпадений не найдено")
 print(m)
 #Найдите сумму и произведение элементов списка. Результаты вывести на экран;
 import random
