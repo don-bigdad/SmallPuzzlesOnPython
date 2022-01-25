@@ -108,3 +108,11 @@ while 1000>i:
     if N%2==0:
         q+=1
 print((10*q)/100)
+#Задача: заполнить список десятью случайными числами от 
+#1 до 100 и посчитать их сумму.
+import random
+list=[]
+for i in range(10):
+    list.append(random.randint(1,100))
+print(list)
+print(sum(list))
