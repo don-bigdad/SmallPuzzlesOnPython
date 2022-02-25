@@ -67,3 +67,78 @@ u=n
 for q in range (k,n):
     print("*"*k +" "*u)
     k+=1
+# Написать функцию, которая заполняет массив случайными числами в диапазоне, указанном пользователем.
+# Функция должна принимать два аргумента — начало диапазона и его конец, при этом ничего не возвращать.
+# Вывод значений элементов массива должен происходить в основной ветке программы.
+import random
+# def massive(start,end):
+#     x=[]
+#     for i in range (10):
+#         x.append(random.randint(start,end))
+#     return x
+# start=int(input())
+# end=int(input())
+# print(massive(start,end))
+def massive(start,end):
+    x=[]
+    [x.append(random.randint(start,end)) for _ in range (10)]
+    return x
+start=10
+end=20
+print(massive(start,end))
+# Написать функцию, которая определяет количество разрядов введенного целого числа.
+# Написать функцию, которая определяет количество разрядов введенного целого числа.
+def number_digit(n):
+    count=0
+    while n>0:
+        n=n//10
+        count+=1
+    return count
+n=int(input())
+print("разряд числа",number_digit(n))
+# Дан одномерный массив, состоящий из натуральных чисел.
+# Выполнить сортировку данного массива по возрастанию суммы цифр чисел.
+import random
+from re import X
+
+x = []
+[x.append(random.randint(10, 400)) for _ in range(5)]
+print(x)
+y = []
+for element in x:
+    if len(str(element)) == 3:
+        maxsum = 0
+        element0 = element // 100
+        element1 = element // 10 % 10
+        element2 = element % 10
+        sum = element0 + element1 + element2
+        y.append(sum)
+    else:
+        element1 = element // 10
+        element2 = element % 10
+        sum = element1 + element2
+        y.append(sum)
+y.sort()
+print(x, y)
+# Дана квадратная матрица.
+# Вычислить сумму элементов главной или побочной диагонали в зависимости от выбора пользователя.
+# Сумма элементов любой диагонали
+def sum_diagonal(n,x):
+    sum=0
+    x0=x[0]
+    x1=x[1]
+    x2=x[2]
+    if n=="main":
+        sum=x0[0]+x1[1]+x2[2]
+        return sum
+    else:
+        sum=x0[2]+x1[1]+x2[0]
+        return sum
+n=input()
+x=[[1,2,3],[4,5,6],[11,8,9]]
+print(sum_diagonal(n,x))
+# Изменить порядок слов в строке на обратный
+n="каждый охотник желает знать, где сидит фазан".split()
+n.reverse()
+n =" ".join(n)
+print(n)
