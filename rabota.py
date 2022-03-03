@@ -142,3 +142,85 @@ n="каждый охотник желает знать, где сидит фаз
 n.reverse()
 n =" ".join(n)
 print(n)
+# Напишите функцию to_dict(lst), которая принимает аргумент в виде списка и возвращает словарь, 
+# в котором каждый элемент списка является и ключом и значением. 
+# Предполагается, что элементы списка будут соответствовать правилам задания ключей в словарях.
+def to_dict(list):
+    dict={}
+    for element in list:
+        dict[element]=element
+    return dict
+list=[1,2,3,4,5]
+print(to_dict(list))
+# Иван решил создать самый большой словарь в мире. Для этого он придумал функцию biggest_dict(**kwargs), 
+# которая принимает неограниченное количество параметров «ключ: значение» и обновляет созданный им словарь my_dict,
+# состоящий всего из одного элемента «first_one» со значением «we can do it». Воссоздайте эту функцию.
+def biggest_dict(**element):
+    dict.update(**element)
+    return dict
+dict={"first_one":"we can do it"}
+biggest_dict(k1=22, k2=31, k3=11, k4=91)
+print(dict)
+# напишите функцию которая сумирует числа(чисел может быть произвольное кол-во)
+def summ(*element):
+    sum=0
+    for item in element:
+        sum+=item
+    return sum
+print(summ(2,2,2,3,3))
+# Дана строка в виде случайной последовательности чисел от 0 до 9.
+# Требуется создать словарь, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом int), 
+# а в качестве значений – количество этих чисел в имеющейся последовательности.
+# Для построения словаря создайте функцию count_it(sequence), принимающую строку из цифр. 
+str=list(map(int,("1,2,3,4,5,1,2,3").split(",")))
+def dict(str):
+    dict={}
+    list1=[]
+    count=0
+    for element in str:
+        dict[element]=str.count(element)
+    return dict
+print(dict(str))
+# Создайте словарь с количеством элементов не менее 5-ти. Поменяйте местами первый и последний элемент объекта. 
+# Удалите второй элемент. Добавьте в конец ключ «new_key» со значением «new_value».
+x={1:"one",2:"two",3:"three",4:"four",5:"five"}
+def del_second(x):
+    i=int(input())
+    x.pop(i)
+    return x
+print(del_second(x))
+def switch(x):
+    x=[{5:x[5],2:x[2],3:x[3],4:x[4],1:x[1]} for i in range (1)]
+    return x
+print(switch(x))
+x={1:"one",2:"two",3:"three",4:"four",5:"five"}
+def new_key(x):
+    x["new_key"]="new_value"
+    return x
+print(new_key(x))
+# x={1:"one",2:"two",3:"three",4:"four",5:"five"}
+# second=list(x.items())[1]
+# print(second)
+# Напишите функцию sum_range(start, end), которая суммирует все целые числа от значения start до величины end включительно. 
+# Если пользователь задаст первое число большее чем второе, просто поменяйте их местами.
+def sum_range(start,end):
+    sum=0
+    if start<end:
+        for i in range(start,end+1):
+            sum+=i
+        return sum
+    else:
+        for i in range(end,start+1):
+            sum+=i
+        return sum
+print(sum_range(12,10))
+# Создайте функцию three_args(), которая принимает 1, 2 или 3 строго ключевых параметра. 
+# В результате ее работы на печать в консоль выводятся значения переданных переменных, но только если они не равны None. 
+# Получим, например, следующее сообщение: Переданы аргументы: var1 = 2, var3 = 10.
+def three_args(*args):
+    dict={}
+    for i in range(*args):
+        dict[f"var{i}"]=i
+three_args(1,2,3)
+print(three_args(1,2,3))
+        
