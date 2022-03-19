@@ -223,4 +223,22 @@ def three_args(*args):
         dict[f"var{i}"]=i
 three_args(1,2,3)
 print(three_args(1,2,3))
-        
+def format_duration(seconds):
+    minute=seconds//60
+    hour=seconds//3600
+    days=seconds//86400
+    year=seconds//31536000
+    if seconds<60 and seconds!=1:
+        return f'{seconds} seconds'
+    elif seconds==1:
+        return f'{seconds} second'
+    elif minute>=1 and seconds<3600 :
+        return f'{minute} minute and {seconds-(minute*60)} seconds'
+    elif seconds>=3600 and seconds<86400:
+        return f'{hour} hour, {(seconds-3600*hour)//60} minute and {seconds-(minute*60)} seconds' 
+    elif seconds>=86400 and seconds<31536000:
+        return f'{days} day {(seconds-86400*days)//3600} hours {(seconds-3600*hour)//60} minutes {seconds-(minute*60)} seconds'
+    elif seconds>=31536000:
+        return f'{year} years {(seconds-31536000*year)//21600} day {(seconds-86400*days)//3600} hours {(seconds-3600*hour)//60} minutes {seconds-(minute*60)} seconds'
+print(format_duration(58))
+
